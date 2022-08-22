@@ -1,0 +1,38 @@
+Symfony commands: ("php bin/console" or "symfony console")
+
+# symfony serve or symfony server:start
+# symfony server:stop (should be executed after doing ctrl+c)
+
+	* Start from new project you just clone *
+# php bin/console doctrine:database:create
+# php bin/console doctrine:migrations:migrate (update your database)
+	  * End from new project you just clone *
+
+# symfony console make:entity
+# php bin/console make:migration (create migration file) 
+	*to use when you update models in your project*
+# php bin/console make:migrations:migrate (apply migration file created)
+
+mysql commands:
+SET PASSWORD FOR 'root'@'localhost' = "william";
+
+> Camelcase & Underscore (exple: releaseYear vs relase_year)
+
+> For relation ManyToMany, Symfony creates a pivot table to store relations 
+  between tables
+
+# composer require --dev doctrine/doctrine-fixtures-bundle
+# symfony console doctrine:fixtures:load
+
+> attribute 'Reference' of class Fixture allows us to send data between Fixtures classes.
+
+> functions 'findBy' and 'findOneBy'
+Exple: $movies = $movieRepository->findBy(['releaseYear' => 2021], ['id' => 'DESC']);
+> function 'count'
+Exple: $repository->count(['id' => 7]);
+
+@webpack-encore-bundle
+# composer require symfony/webpack-encore-bundle
+# npm install
+# npm run dev
+# npm run watch (watch for change in our assets folder)
