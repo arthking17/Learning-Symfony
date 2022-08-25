@@ -1,0 +1,20 @@
+{% extends "./base.html.twig" %}
+
+{% block body %}
+	<div class="w-4/5 m-auto pt-40">
+		<h1 class="text-6xl text-center pb-12">
+			Create Movie
+		</h1>
+
+		{{ form_start(form) }}
+
+		{{ form_widget(form) }}
+
+		<button type="submit" class="bg-blue-500 font-bold py-2 px-4 rounded
+				        transition-all hover:bg-blue-300">
+			Create Movie
+		</button>
+
+		{{ form_end(form) }}
+	</div>
+{% endblock %}

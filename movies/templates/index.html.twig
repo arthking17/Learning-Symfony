@@ -1,4 +1,4 @@
-{% extends "base.html.twig" %}
+{% extends "./base.html.twig" %}
 
 {% block title %}
 	Movies Page
@@ -6,13 +6,14 @@
 
 {% block body %}
 
-	<h1> Wooohooo {{ author }}</h1>
+	<h1 class="bg-blue-500 text-2xl text-center font-bold"> Wooohooo {{ author }}</h1>
  
+ 	<img src="{{ asset('build/images/image1.efcc6e53.jpg') }}" alt="">
 	<ul>
 		{% for movie in movies %}
 			<li>
-				{{ movie }}
+				{{ movie.title }}
 			</li>
 		{% endfor %}
 	</ul>
-{% endblock %}
+{% endblock %} 

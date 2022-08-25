@@ -39,11 +39,22 @@ symfony console doctrine:databases:create
 symfony console doctrine:migrations:migrate
 ```
 
-- [ ] Start symfony server
+- [ ] Start and stop symfony server
 
 ```bash
-symfony server
+symfony serve
+    # or #
+symfony serve -d
+    # or #
+symfony server:start
 symfony server:stop
+```
+
+- [ ] Before start coding
+
+```bash
+symfony serve -d
+npm run watch
 ```
 
 - [ ] mysql commands:
@@ -78,3 +89,47 @@ npm install
 npm run dev
 npm run watch #(watch for change in our assets folder)
 ```
+
+- [ ] ***TailwindCSS***
+
+```bash
+npm install -D tailwindcss postcss-loader purgecss-webpack-plugin glob-all path
+npx tailwindcss init -p
+###
+npx tailwindcss -i ./assets/styles/app.css -o ./public/build app.css --watch
+###
+npm install file-loader --save-dev
+```
+
+- [ ] Forms in Symfony
+
+```bash
+composer require symfony/form
+symfony console make:form MovieFormType Movie
+composer require symfony/mime
+```
+
+- [ ] Form Validation
+
+```bash
+composer require symfony/validator doctrine/annotations
+```
+
+```php
+use Symfony\Component\Validator\Constraints as Assert;
+```
+
+- [ ] Symfony Login bundle
+
+```bash
+composer require symfony/security-bundle
+symfony console make:user User
+symfony console make:migration
+symfony console doctrine:migrations:migrate
+symfony console make:registration-form
+symfony console make:auth
+```
+
+## Screenshots
+
+![Movies App Screenshot](movies-screenshot.png)
