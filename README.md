@@ -1,4 +1,8 @@
-# Learning Symfony 6
+# Learning Symfony 6 | Movies App
+
+## Screenshots
+
+![App Screenshot](movies-screenshot.png)
 
 ## Prerequisites
 
@@ -129,7 +133,3 @@ symfony console doctrine:migrations:migrate
 symfony console make:registration-form
 symfony console make:auth
 ```
-
-## Screenshots
-
-![Movies App Screenshot](movies-screenshot.png)
